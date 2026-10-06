@@ -5,13 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Marquee Banner</title>
 <style>
-  html, body { margin: 0; background: transparent; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, #F5E100 0%, #FDFDA0 45%, #8FC1E3 100%);
+  }
   .banner {
-    height: 48px;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
-    background: linear-gradient(90deg, #F5E100 0%, #FDFDA0 45%, #8FC1E3 100%);
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14px;
     font-weight: 600;
