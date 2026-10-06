@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marquee Banner</title>
+<style>
+  html, body { margin: 0; background: transparent; }
+  .banner {
+    height: 48px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #F5E100 0%, #FDFDA0 45%, #8FC1E3 100%);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e4d3a;
+  }
+  .track {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+  }
+  .group { display: flex; flex-shrink: 0; }
+  .item { white-space: nowrap; padding: 0 40px; }
+  .dot::before { content: "•"; padding: 0 40px 0 0; }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="track">
+      <div class="group">
+        <span class="item">New Look, Same MegaFood</span><span class="item dot">Free Shipping over $50</span>
+        <span class="item dot">New Look, Same MegaFood</span><span class="item dot">Free Shipping over $50</span>
+        <span class="item dot">New Look, Same MegaFood</span><span class="item dot">Free Shipping over $50</span>
+        <span class="item dot">New Look, Same MegaFood</span><span class="item dot">Free Shipping over $50</span>
+      </div>
+      <div class="group" aria-hidden="true">
+        <span class="item dot">New Look, Same MegaFood</span><span class="item dot">Free Shipping over $50</span>
+        <span class="item dot">New Look, Same MegaFood</span><span class="item dot">Free Shipping over $50</span>
+        <span class="item dot">New Look, Same MegaFood</span><span class="item dot">Free Shipping over $50</span>
+        <span class="item dot">New Look, Same MegaFood</span><span class="item dot">Free Shipping over $50</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
